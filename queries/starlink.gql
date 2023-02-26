@@ -1,0 +1,12 @@
+query products ($name: String) {
+    products(options: { filter: { name: { contains: $name } } }) {
+        items {
+        name
+        description
+        featuredAsset{
+            source
+            }
+        }
+    }
+}
+
