@@ -4,10 +4,12 @@
         h2 {{ item.name }}
         .down
                 NuxtLink#link(:to="`/${item.name}`") show details
-                button add to cart
+                button(@click="update" ) add to cart 
 </template>
 
 
 <script setup lang="ts">
 const props = defineProps(['data', 'input']);
+const cart = useCart()
+const update = ()=> cart.value =cart.value+1
 </script>

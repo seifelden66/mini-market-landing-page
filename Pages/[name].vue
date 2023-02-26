@@ -5,7 +5,7 @@ div.det(v-for="item in data.products.items" :key="item.name")
     h1 {{ item.name }}
     img(:src="item.featuredAsset.source" alt="image")
     h4 {{ item.description }}
-    button(@click="add") add
+    button(@click="update" ) add to cart
   
 </template>
 
@@ -13,9 +13,11 @@ div.det(v-for="item in data.products.items" :key="item.name")
 const route = useRoute();
 const namee = route.params.name;
 const { data } = await useAsyncGql(
-  "products",
-  reactive<{ name: string | undefined }>({ name: "" })
+    "products",
+    reactive<{ name: string | undefined }>({ name: "" })
 );
+const cart = useCart()
+    const update = ()=> cart.value =cart.value+1
 </script>
 <style lang="scss">
 .det {
