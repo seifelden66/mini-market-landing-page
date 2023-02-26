@@ -5,7 +5,50 @@
         NuxtLink#link(
             to="/"
         )   
-            h3 simple market
-
+            h3 mini market
+    .right 
+        p {{ cart }}
+        p <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 36 36"><circle cx="13.33" cy="29.75" r="2.25" fill="currentColor" class="clr-i-outline clr-i-outline-path-1"/><circle cx="27" cy="29.75" r="2.25" fill="currentColor" class="clr-i-outline clr-i-outline-path-2"/><path fill="currentColor" d="M33.08 5.37a1 1 0 0 0-.77-.37H11.49l.65 2H31l-2.67 12h-15L8.76 4.53a1 1 0 0 0-.66-.65L4 2.62a1 1 0 1 0-.59 1.92L7 5.64l4.59 14.5l-1.64 1.34l-.13.13A2.66 2.66 0 0 0 9.74 25A2.75 2.75 0 0 0 12 26h16.69a1 1 0 0 0 0-2H11.84a.67.67 0 0 1-.56-1l2.41-2h15.44a1 1 0 0 0 1-.78l3.17-14a1 1 0 0 0-.22-.85Z" class="clr-i-outline clr-i-outline-path-3"/><path fill="none" d="M0 0h36v36H0z"/></svg>
 </template>
+<script setup lang="ts">
+const cart = useCart()
+</script>
 
+<style lang="scss" scoped>
+#nav{
+    background-color: rgb(228, 235, 130);
+    margin:-8px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .left{
+        #link{
+            text-decoration: none;
+            
+        }
+    }
+    .right{
+        position: relative;
+        transform: translate(-35px, -35px);
+        p{
+            position: absolute;
+        }
+        svg{
+            position: absolute;
+            top: 10px;
+            left: -15px;
+        }
+    }
+
+}    
+@media (max-width: 1024px) {
+    #nav {
+
+        padding: 10px;
+        margin: -8px;
+        display: flex;
+        gap: 0.5rem;
+    }
+}
+</style>

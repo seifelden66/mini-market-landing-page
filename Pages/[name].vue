@@ -5,7 +5,7 @@ div.det(v-for="item in data.products.items" :key="item.name")
     h1 {{ item.name }}
     img(:src="item.featuredAsset.source" alt="image")
     h4 {{ item.description }}
-
+    button(@click="add") add
   
 </template>
 

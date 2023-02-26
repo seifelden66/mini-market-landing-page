@@ -17,25 +17,13 @@ const { data } = await useAsyncGql(
   "products",
   reactive<{ name: string | undefined }>({ name: "" })
 )
+
+
+
 </script>
 
 <style lang="scss">
-#nav {
-  background-color: rgb(228, 235, 130);
-  padding: 15px;
-  margin: -8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  .left{
-    #link{
-      text-decoration: none;
-      color: rgb(133, 128, 210);
-    }
-  }
 
-}
 .search{
   background-color: rgba(139, 133, 224, 0.726);
   margin: -8px;
@@ -76,16 +64,7 @@ const { data } = await useAsyncGql(
   }
 }
 @media (max-width: 1024px) {
-  #nav {
-    background-color: rgb(228, 235, 130);
-    padding: 10px;
-    margin: -8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    
-  }
+
   .search{
     
     margin: -8px;

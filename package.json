@@ -8,11 +8,17 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxtjs/fontawesome": "^1.1.2",
     "nuxt": "^3.0.0",
     "nuxt-graphql-client": "^0.2.24",
     "vite-plugin-pug": "^0.3.2"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.3.0",
+    "@fortawesome/free-brands-svg-icons": "^6.3.0",
+    "@fortawesome/free-regular-svg-icons": "^6.3.0",
+    "@fortawesome/free-solid-svg-icons": "^6.3.0",
+    "@fortawesome/vue-fontawesome": "^3.0.3",
     "sass": "^1.58.3"
   }
 }
